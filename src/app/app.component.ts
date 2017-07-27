@@ -3,6 +3,7 @@ import { Hero } from './hero';
 import { HeroService } from './hero.service';
 
 heroes: Hero[];
+constructor(private heroService: HeroService) { }
 
 @Component({
   selector: 'my-app',
@@ -65,6 +66,7 @@ heroes: Hero[];
         border-radius: 4px 0 0 4px;
       }
     `]
+    providers: [HeroService]
 })
 export class AppComponent  {
 title = 'Tour of Heroes';
