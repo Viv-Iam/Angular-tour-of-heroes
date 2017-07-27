@@ -68,13 +68,16 @@ constructor(private heroService: HeroService) { };
     `]
     providers: [HeroService]
 })
-export class AppComponent  {
+export class AppComponent implements OnInit  {
 title = 'Tour of Heroes';
 heroes = HEROES;
 selectedHero: Hero;
 
 onSelect(hero: Hero): void{
 this.selectedHero = hero;
+}
+ngOnInit(): void {
+  this.getHeroes();
 }
 getHeroes(): void {
   this.heroes = this.heroService.getHeroes();
