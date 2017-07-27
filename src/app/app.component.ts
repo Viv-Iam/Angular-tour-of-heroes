@@ -36,8 +36,7 @@ const HEROES: Hero[] = [
       <input [(ngModel)]="selectedHero.name" placeholder="name">
       </div>
       </div>
-
-    `
+    `,
     styles: [`
       .selected {
         background-color: #CFD8DC !important;
@@ -90,9 +89,10 @@ const HEROES: Hero[] = [
 })
 export class AppComponent  {
 title = 'Tour of Heroes';
+heroes = HEROES;
 selectedHero: Hero;
+
 onSelect(hero: Hero): void{
 this.selectedHero = hero;
 }
-heroes = HEROES;
 }
