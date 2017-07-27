@@ -8,8 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var module_1 = require();
-'angular/core';
+var core_1 = require("@angular/core");
 var hero_1 = require("./hero");
 var HeroDetailComponent = (function () {
     function HeroDetailComponent() {
@@ -17,11 +16,11 @@ var HeroDetailComponent = (function () {
     return HeroDetailComponent;
 }());
 __decorate([
-    module_1.Input(),
+    core_1.Input(),
     __metadata("design:type", hero_1.Hero)
 ], HeroDetailComponent.prototype, "hero", void 0);
 HeroDetailComponent = __decorate([
-    module_1.Component({
+    core_1.Component({
         selector: 'hero-detail',
         template: "\n  <div *ngIf=\"hero\">\n  <h2>{{hero.name}} details!</h2>\n  <div><label>id: </label>{{hero.id}}</div>\n  <div>\n    <label>name: </label>\n    <input [(ngModel)]=\"hero.name\" placeholder=\"name\">\n    </div>\n    </div>\n  "
     })
