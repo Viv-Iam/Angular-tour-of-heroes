@@ -3,7 +3,7 @@ import { Hero } from './hero';
 import { HeroService } from './hero.service';
 
 heroes: Hero[];
-constructor(private heroService: HeroService) { }
+constructor(private heroService: HeroService) { };
 
 @Component({
   selector: 'my-app',
@@ -75,5 +75,8 @@ selectedHero: Hero;
 
 onSelect(hero: Hero): void{
 this.selectedHero = hero;
+}
+getHeroes(): void {
+  this.heroes = this.heroService.getHeroes();
 }
 }
