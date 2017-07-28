@@ -2,6 +2,12 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Location } from '@angular/common';
 
+constructor(
+  private heroService: HeroService,
+  private route: ActivatedRoute,
+  private location: Location
+) {}
+
 import { HeroService } from './hero.service';
 @Component({
   selector: 'hero-detail',
