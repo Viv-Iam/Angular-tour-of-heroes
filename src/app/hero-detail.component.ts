@@ -8,6 +8,7 @@ import { HeroService } from './hero.service';
 
 @Component({
   selector: 'hero-detail',
+  styleUrls: [ './dashboard.component.css' ]
   templateUrl: './hero-detail.component.html',
   template: `
   <div *ngIf="hero">
