@@ -9,9 +9,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
+var router_1 = require("@angular/router");
+var common_1 = require("@angular/common");
+require("rxjs/add/operator/switchMap");
+var hero_service_1 = require("./hero.service");
+constructor(private, heroService, hero_service_1.HeroService, private, route, router_1.ActivatedRoute, private, location, common_1.Location);
+{ }
 var HeroDetailComponent = (function () {
     function HeroDetailComponent() {
     }
+    HeroDetailComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.route.paramMap
+            .switchMap(function (params) { return _this.heroService.getHero(+params.get('id')); })
+            .subscribe(function (hero) { return _this.hero = hero; });
+    };
     return HeroDetailComponent;
 }());
 __decorate([
