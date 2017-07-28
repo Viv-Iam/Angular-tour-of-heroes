@@ -23,9 +23,14 @@ import { DashboardComponent } from './dashboard.component';
         path: 'dashboard',
         component: DashboardComponent
         }
+        {
+        path: '',
+        redirectTo: '/dashboard',
+        pathMatch: 'full'
+        }
         ])
   ],
-  declarations: [ AppComponent, HeroDetailComponent, HeroesComponent ],
+  declarations: [ AppComponent, DashboardComponent, HeroDetailComponent, HeroesComponent ],
   providers:    [HeroService],
   bootstrap:    [ AppComponent ]
 })
