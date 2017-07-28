@@ -12,6 +12,7 @@ constructor(
 ) {}
 @Component({
   selector: 'hero-detail',
+  templateUrl: './hero-detail.component.html',
   template: `
   <div *ngIf="hero">
   <h2>{{hero.name}} details!</h2>
