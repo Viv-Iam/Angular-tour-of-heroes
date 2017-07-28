@@ -13,10 +13,11 @@ var router_1 = require("@angular/router");
 var common_1 = require("@angular/common");
 require("rxjs/add/operator/switchMap");
 var hero_service_1 = require("./hero.service");
-constructor(private, heroService, hero_service_1.HeroService, private, route, router_1.ActivatedRoute, private, location, common_1.Location);
-{ }
 var HeroDetailComponent = (function () {
-    function HeroDetailComponent() {
+    function HeroDetailComponent(heroService, route, location) {
+        this.heroService = heroService;
+        this.route = route;
+        this.location = location;
     }
     HeroDetailComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -38,7 +39,10 @@ HeroDetailComponent = __decorate([
         selector: 'hero-detail',
         templateUrl: './hero-detail.component.html',
         template: "\n  <div *ngIf=\"hero\">\n  <h2>{{hero.name}} details!</h2>\n  <div><label>id: </label>{{hero.id}}</div>\n  <div>\n    <label>name: </label>\n    <input [(ngModel)]=\"hero.name\" placeholder=\"name\">\n    </div>\n    </div>\n  "
-    })
+    }),
+    __metadata("design:paramtypes", [hero_service_1.HeroService,
+        router_1.ActivatedRoute,
+        common_1.Location])
 ], HeroDetailComponent);
 exports.HeroDetailComponent = HeroDetailComponent;
 //# sourceMappingURL=hero-detail.component.js.map
